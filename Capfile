@@ -1,9 +1,12 @@
 # Load DSL and set up stages
 require "capistrano/setup"
+require "capistrano/deploy"
 
 # Include default deployment tasks
-require "capistrano/deploy"
-require 'capistrano/upload-config'
+require 'capistrano/bundler'
+require "capistrano/upload-config"
+require "capistrano/puma"
+require "capistrano/rvm"
 
 # Load the SCM plugin appropriate to your project:
 #
@@ -34,6 +37,13 @@ install_plugin Capistrano::SCM::Git
 # require "capistrano/rails/assets"
 # require "capistrano/rails/migrations"
 # require "capistrano/passenger"
+
+task :test_env do
+  on 'vcap@10.0.0.124' do
+   info capture("env")
+  end
+end
+	
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
 Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
