@@ -3,7 +3,7 @@ lock "3.7.1"
 before 'deploy:check:linked_files', 'config:push'
 
 set :application, "upshot-ruby-test"
-set :repo_url, "git@github.com:alesium/upshot-ruby-test.git"
+set :repo_url, "https://github.com/alesium/upshot-ruby-test.git"
 
 
 # Default branch is :master
