@@ -40,7 +40,6 @@ gem 'capistrano-bundler', group: :development
 gem 'capistrano-upload-config', group: :development
 gem 'capistrano3-puma', group: :development
 gem 'capistrano-rvm', group: :development
-gem 'capistrano-sidekiq', group: :development
 #
 
 group :development, :test do

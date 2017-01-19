@@ -7,7 +7,6 @@ require 'capistrano/bundler'
 require "capistrano/upload-config"
 require "capistrano/puma"
 require "capistrano/rvm"
-require "capistrano/sidekiq"
 
 # Load the SCM plugin appropriate to your project:
 #

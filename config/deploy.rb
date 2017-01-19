@@ -44,7 +44,7 @@ set :puma_plugins, []  #accept array of plugins
 set :nginx_use_ssl, false
 
 # Default value for :linked_files is []
-append :linked_files, "config/database.yml", "config/secrets.yml"
+append :linked_files, "config/database.yml", "config/secrets.yml", "config/sidekiq/sidekiq.yml"
 
 # Default value for linked_dirs is []
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
