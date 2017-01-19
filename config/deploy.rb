@@ -28,7 +28,7 @@ set :rails_env, "production"
 set :puma_user, fetch(:user)
 set :puma_state, "#{shared_path}/tmp/pids/puma.state"
 set :puma_pid, "#{shared_path}/tmp/pids/puma.pid"
-set :puma_bind, "unix:#{shared_path}/tmp/sockets/puma.sock"
+set :puma_bind, "unix://#{shared_path}/tmp/sockets/puma.sock"
 set :puma_default_control_app, "unix://#{shared_path}/tmp/sockets/pumactl.sock"
 set :puma_conf, "#{shared_path}/config/puma.rb"
 set :puma_access_log, "#{shared_path}/log/puma_access.log"
